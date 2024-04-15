@@ -22,11 +22,7 @@ $message = "";
             echo "</script>";
             $message = "Password Doesn't Match";
 
-<<<<<<< HEAD
             }else if (strlen($pass) < 8||strlen($repass) < 8) {
-=======
-            } else if (strlen($pass) < 8||strlen($repass) < 8) {
->>>>>>> 81dcbe3a9428265b1d1d9fcfeb8bcf1ff1aa594f
                 
                 echo "<script>";
             echo "document.addEventListener('DOMContentLoaded', function() {";

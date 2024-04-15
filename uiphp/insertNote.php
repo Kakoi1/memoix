@@ -18,12 +18,8 @@
                         $stmt->bindParam(':uid', $userId, PDO::PARAM_INT);
                         $stmt->execute();
 
-<<<<<<< HEAD
                         // header("Location: ".$_SERVER['dashboard.php']);
                         echo '<script>window.location.href=window.location.href;</script>';
-=======
-                        echo "<script>location.href = location.href;</script>";
->>>>>>> 81dcbe3a9428265b1d1d9fcfeb8bcf1ff1aa594f
                     } catch (PDOException $e) {
                         echo "Error: " . $e->getMessage();
                     } finally {

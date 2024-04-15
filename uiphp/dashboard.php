@@ -52,20 +52,11 @@ $emails = $_SESSION['email'];
                 </div>
                     <div class="navButon" >
                         
-<<<<<<< HEAD
                         <div  onclick="showTab(1)"><p><i class="bi bi-display-fill"></i> Dashboard</p></div> 
                         <div id="fav" onclick="showTab(2)"><p><i class="bi bi-star-fill"></i> Favorites</p></div> 
                         <div id="archives" onclick="" ><p><a href="archiveNotes.php"><i class="bi bi-archive"></i> Archived Notes </a></p></div>
                         <div id="archives" onclick="" ><p><a href="userEdit.php"><i class="bi bi-pencil-square"></i>  Edit User</a></p></div>
                         <div id="archives" onclick="" ><p><a href="logout.php"><i class="bi bi-box-arrow-left"></i> Log Out</a></p></div>
-=======
-                        <div  onclick="showTab(1)"><p>Dashboard</p></div> 
-                        <div id="fav" onclick="showTab(2)"><p>Favorites</p></div> 
-                        <div id="archives" onclick="" ><p><a href="archiveNotes.php">Archived Notes</a></p></div>
-                        <div id="archives" onclick="" ><p><a href="userEdit.php">Edit User</a></p></div>
-                        <div id="archives" onclick="" ><p><a href="logout.php">Log Out</a></p></div>
-                       
->>>>>>> 81dcbe3a9428265b1d1d9fcfeb8bcf1ff1aa594f
                                           
                     </div>
             </div>
@@ -310,16 +301,8 @@ function updateStar() {
                 $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 
                 updating($n_title,$n_description,$n_id,$star,$arc,$date);
-<<<<<<< HEAD
             
                 echo '<script>window.location.href=window.location.href;</script>';
-=======
-                
-                echo "<script>location.href = location.href;</script>";
-                // header("Location: ".$_SERVER['PHP_SELF']);
-                // exit();
-                
->>>>>>> 81dcbe3a9428265b1d1d9fcfeb8bcf1ff1aa594f
 
             } catch  (PDOException $e) {
                 echo "Error: " . $e->getMessage();                 
@@ -360,11 +343,7 @@ function updateStar() {
 
             updating($title,$descrip,$noteId,$star,$notArc,$notDate);
 
-<<<<<<< HEAD
             echo '<script>window.location.href=window.location.href;</script>';
-=======
-            echo "<script>location.href = location.href;</script>";
->>>>>>> 81dcbe3a9428265b1d1d9fcfeb8bcf1ff1aa594f
 
         } catch (PDOException $e) {
             echo "Error: " . $e->getMessage();

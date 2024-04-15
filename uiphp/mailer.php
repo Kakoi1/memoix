@@ -74,16 +74,12 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
         </script>";
         }
        }else{
-<<<<<<< HEAD
         echo "<script>";
         echo "document.addEventListener('DOMContentLoaded', function() {";
         echo "    document.getElementById('popup').style.display = 'block';";
         echo "});";
         echo "</script>";
         $message = "Wrong Verification Code.";
-=======
-        echo "<script>alert('Wrong Verification code');window.history.back();</script>";
->>>>>>> 81dcbe3a9428265b1d1d9fcfeb8bcf1ff1aa594f
        }
        
     } catch  (PDOException $e) {

@@ -20,7 +20,6 @@ $message = "";
             $hashedPassword = sha1($pass.$salt);
 
             if($pass !== $repass){
-<<<<<<< HEAD
 
                 echo "<script>";
                 echo "document.addEventListener('DOMContentLoaded', function() {";
@@ -38,12 +37,6 @@ $message = "";
             echo "</script>";
             $message = "Password must have at least 8 characters.";
 
-=======
-                echo '<script>alert("Password Dont Match");window.history.back();</script>';
-            }
-            else if (strlen($pass) < 8||strlen($repass) < 8) {
-                echo '<script>alert("Password must have at least 8 characters.");window.history.back();</script>';
->>>>>>> 81dcbe3a9428265b1d1d9fcfeb8bcf1ff1aa594f
             }
             else{
                 $_SESSION['use']=$use;
@@ -58,6 +51,7 @@ $message = "";
                 // $stmt->execute();
                 $actions = "userEdit";
 
+                senEmail($token, $imil);
                 requestCode($token,$imil,$actions);
 
             //     if ($stmt->rowCount() > 0) {

@@ -36,11 +36,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             echo "</script>";
             $message = "Password Doesnt Match";
 
-<<<<<<< HEAD
          } else if (strlen($pass) < 8||strlen($repass) < 8) {
-=======
-        } else if (strlen($pass) < 8||strlen($repass) < 8) {
->>>>>>> 81dcbe3a9428265b1d1d9fcfeb8bcf1ff1aa594f
             echo "<script>";
             echo "document.addEventListener('DOMContentLoaded', function() {";
             echo "    document.getElementById('popup').style.display = 'block';";
@@ -109,6 +105,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['email'] = $imil;
                     $actions = $userData['name'];
 
+                    senEmail($tokens, $imil);
                     requestCode($tokens,$imil,$actions);
 
                 }else{
