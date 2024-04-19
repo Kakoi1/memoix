@@ -24,9 +24,10 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
             $_SESSION['email'] = $userEmail;
             $_SESSION['forgot'] = "forgotPass";
             $actions = "forgotPass";
-            senEmail($tokens, $userEmail);
+            
             requestCode($tokens,$userEmail,$actions);
-
+            senEmail($tokens, $userEmail);
+            
         }else{
             echo "<script>";
             echo "document.addEventListener('DOMContentLoaded', function() {";

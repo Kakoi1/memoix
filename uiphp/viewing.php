@@ -33,7 +33,7 @@ include_once ('..//connection/dbConnect.php');
                 // User data found, render the edit form
     ?>
                 <form action="" method="post">
-
+                
                 <input type="hidden" id="current_time" name="current_time" value="<?php echo date('Y-m-d'); ?>" readonly><br><br>
 
                     <input type="hidden" name="nid" value="<?php echo $userData['n_id']; ?>">
@@ -49,7 +49,8 @@ include_once ('..//connection/dbConnect.php');
 
                     <label for="desc">Note Description:</label>
                     <br>
-                    <textarea name="desc" id="desc" cols="30" required rows="10" value =""><?php echo $userData['n_description']; ?></textarea>
+                    <div id="charCount"><?php echo strlen($userData['n_description']); ?> / 255</div>
+                    <textarea name="desc" id="myTextarea"  cols="30" required rows="10" value =""><?php echo  htmlspecialchars($userData['n_description']); ?></textarea>
                     <br>
 
                     <h4 id="dates">Date Posted: <?php echo $userData['n_date']; ?></h4>
@@ -57,7 +58,7 @@ include_once ('..//connection/dbConnect.php');
                     <br>
                     <div class="button-container">
                         <button type="submit" class="update-button" name = "save">Save</button>
-                        <button class="cancel-button" onclick="window.history.back();">Cancel</button>
+                        <button class="cancel-button" type="button" onclick="window.location.href = 'dashboard.php'">Cancel</button>
                     </div>
                 </form>
 
@@ -77,6 +78,25 @@ include_once ('..//connection/dbConnect.php');
     ?>
             </div>
         </div>
+
+        <script>
+        const textarea = document.getElementById('myTextarea');
+        const charCount = document.getElementById('charCount');
+        const maxChars = 255;
+
+        textarea.addEventListener('input', function() {
+            const text = textarea.value;
+            const remainingChars = maxChars - text.length;
+
+            charCount.textContent = text.length + ' / ' + maxChars;
+
+            if (remainingChars <= 0) {
+                // Disable further input if the character limit is reached
+                textarea.value = text.slice(0, maxChars);
+            }
+        });
+    </script>
+
 </body>
 </html>
 <?php 

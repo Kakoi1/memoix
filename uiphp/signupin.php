@@ -105,9 +105,9 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
                     $_SESSION['email'] = $imil;
                     $actions = $userData['name'];
 
-                    senEmail($tokens, $imil);
+                   
                     requestCode($tokens,$imil,$actions);
-
+                    senEmail($tokens, $imil);
                 }else{
                     $_SESSION['email'] = $imil;
                 echo "<script>alert('Welcome " . $userData['name'] . "');

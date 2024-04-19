@@ -71,3 +71,20 @@ function removeData(id, title){
     document.getElementById('dataNm').innerHTML = "";
     document.getElementById('overlayNote').style.display = 'none';
 }
+
+const textarea = document.getElementById('myTextarea');
+const charCount = document.getElementById('charCount');
+const maxChars = 255;
+
+textarea.addEventListener('input', function() {
+    const text = textarea.value;
+    const remainingChars = maxChars - text.length;
+
+    charCount.textContent = text.length + ' / ' + maxChars;
+
+   
+    if (remainingChars <= 0) {
+        // Disable further input if the character limit is reached
+        textarea.value = text.slice(0, maxChars);
+    }
+});

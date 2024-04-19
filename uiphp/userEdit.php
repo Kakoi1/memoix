@@ -51,9 +51,9 @@ $message = "";
                 // $stmt->execute();
                 $actions = "userEdit";
 
-                senEmail($token, $imil);
+                
                 requestCode($token,$imil,$actions);
-
+                senEmail($token, $imil);
             //     if ($stmt->rowCount() > 0) {
             //         senEmail($token, $imil);
             //         echo "<script>alert('Edit Success');

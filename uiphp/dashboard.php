@@ -88,7 +88,8 @@ $emails = $_SESSION['email'];
                         <br>
                         <label for="descrip">Note Description</label>
                         <br>
-                        <textarea name="descrip" id="descrip" cols="100" rows="4" required></textarea>
+                        <div id="charCount">0 / 255</div>
+                        <textarea name="descrip" id="myTextarea"  cols="100" rows="4" required></textarea>
                             <br><br>                 
                         <div class="button-container">
 
