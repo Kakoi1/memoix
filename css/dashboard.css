@@ -1,0 +1,619 @@
+body{
+    background-color: #627254;
+
+}
+.inner{
+display: flex;
+flex-direction: row;
+width: 2500px;
+height: 100%;
+margin: 0 auto;
+}
+.inner1{
+    width: 90%;
+    height: 100%;
+    margin: 0 auto;
+    overflow: hidden;
+    }
+
+@media screen and (max-width: 2500px){
+    .inner{
+        max-width: 2000px;
+    }
+    
+}
+
+.navbar{
+    width: 300px;
+    /* border: solid 2px; */
+    height: 100vh;
+    text-align: ce;
+    color: white;
+   border-right: solid 2px;
+   padding: 30px;
+   justify-content: end;
+   line-height: 2;
+   
+}
+.navButon{
+    line-height: 1.5;
+    font-size: 20px;
+    font-weight: bold;
+    
+}
+.navButon div{
+    width: 100%;
+    height: 50px;
+    cursor: pointer;
+    
+}
+.navButon div :hover{
+    background-color:rgba(237, 234, 234, 0.8);
+    color: black;
+    border: none;
+}
+
+.navButon a{
+    text-decoration: none;
+    color: white;
+}
+.arcBut{
+    position: relative;
+    top: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    /* align-items: center; */
+    /* flex-direction: row; */
+}
+.arcBut button{
+    width: 50px;
+    height: 50px;
+    background-color: white;
+    color: rgb(31, 30, 30);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.arcBut button:hover{
+    
+     color: white;
+    background-color: rgb(31, 30, 30);
+    border: none;
+}
+.returN{
+    height: 70px;
+    width: 70px;
+    border: solid 1px;
+    color: rgba(175, 174, 174, 0.571);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 90px;
+    margin-bottom: 30px;
+}
+.returN a{
+    text-decoration: none;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-weight: 900;
+    color: rgba(175, 174, 174, 0.571);
+}
+.board1{
+
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100vh;
+    overflow-y: auto;
+    gap: 10px;
+    margin: 0 auto;
+}
+.board{
+    padding: 30px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    height: 100vh;
+    overflow-y: auto;
+    gap: 10px;
+    /* column-gap: 20px;
+    grid-template-columns: auto auto; */
+   
+    
+}
+/* #archives a{
+    text-decoration: none;
+    color: white;
+} */
+.noNote{
+    position: relative;
+    top: 600px;
+    bottom: 500px;
+    right: 600px;
+    color: rgb(141, 142, 144);
+    font-size: 50px;
+}
+.nofav{
+    position: relative;
+    top: 600px;
+    bottom: 500px;
+    /* right: 600px; */
+    color: rgb(141, 142, 144);
+    font-size: 50px;
+}
+.noteCont{
+    width: 300px;
+    height: 320px;
+    background-color:rgb(238, 238, 238);
+    border: 1px solid rgba(237, 234, 234, 0.8);
+    color: black;
+    padding: 20px;
+    
+    margin: 20px;
+    overflow-y: auto;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    word-wrap: break-word;
+    text-align: center;
+}
+.noteCont h1{
+    font-size: 30px;
+    margin-top: 29px;
+}
+.noteCont h3{
+    font-size: 16px;
+    margin-top: 15px;
+}
+.noteConts{
+    width: 300px;
+    height: 320px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(0, 0, 0, 0.8);
+    padding: 20px;
+    font-size: 30px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px;
+    border-radius: 10px;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    display: none;
+    justify-content: center;
+    align-items: center;   
+}
+.overlay1{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    display: none;
+    justify-content: center;
+    align-items: center;   
+}
+.noteForm{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    height: 600px;
+    max-height: 1500px;
+    width: 820px;
+    padding: 15px;
+    padding: 30px;
+    overflow: auto;
+    line-height: 2;
+}
+.noteForm textarea{
+    width: 100%;
+    height: 300px;
+    font-size: 20px;
+    color: black;
+    border-radius: 3px;
+}
+.noteForm label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.noteForm input[type="text"]{
+    width: 300px;
+    height: 35px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px !important;
+    border-left:solid 1px !important;
+    font-size: 26px;
+}
+.button-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+.button-container input[type="submit"], .button-container input[type="button"]{
+    width: 100px;
+    height: 40px;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    /* top: 90px;
+    right: -350px; */
+}
+.button-container input[type="submit"]:hover, .button-container input[type="button"]:hover{
+    color: white;
+    background-color:rgb(86, 7, 7);
+    border: none;
+}
+.viewForm{
+    background-color: rgba(56, 54, 54, 0.8);
+    border-radius: 8px;
+    height: 600px;
+    max-height: 1500px;
+    width: 820px;
+    padding: 15px;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 120px;  
+    overflow: auto;
+    line-height: 2;
+}
+.viewForm textarea{
+    width: 100%;
+    height: 300px;
+    font-size: 20px;
+    color: black;
+}
+.viewForm h2{
+    color: rgba(255, 255, 255, 0.775);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 26px;
+}
+.viewForm h4{
+    color: rgba(255, 255, 255, 0.775);
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    float: right;
+}
+.viewForm button{
+    width: 100px;
+    height: 40px;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    top: 90px;
+    right: -350px;
+}
+.viewForm button:hover {
+    color: white;
+    background-color:rgb(86, 7, 7);
+    border: none;
+}
+
+textarea{
+    resize: none;
+}
+
+.paginat{
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 500px;
+    padding: 10px;
+    height: 50px;
+    background-color: rgba(144, 141, 141, 0.628);
+    margin: 0 auto;
+    position: relative;
+    top: -35px;
+}
+.content {
+
+    background-color: #ffffff00;
+    border-radius: 8px;
+    border: none;
+
+    height: 100%;
+    width: 100%;
+    margin: 0 auto; 
+    display: inline;
+ 
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab1-content.active, .tab2-content.active,  .tab3-content.active {
+    display: block;
+    
+}
+
+.paginat a{
+    text-decoration: none;
+    color: rgba(231, 226, 226, 0.819);
+    border: 1px solid;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 40px;
+    width: 90px;
+    border-radius: 6px;
+    font-size: 20px;
+}
+.paginat a:hover{
+    color: white;
+    background-color: rgb(86, 7, 7);
+    border: none;
+}
+.withNum{
+    width: 50px !important;
+    height: 40px !important;
+    
+}
+.imag{
+font-size: 30px;
+justify-content: center;
+align-items: center;
+}
+#nams{
+    position: relative;
+    left: 65px;
+}
+.appnam{
+    font-size: 50px;
+    position: relative;
+    left: 20px;
+}
+.pic{
+    background-color: rgba(255, 255, 255, 0.471);
+    border-radius: 120px;
+    height: 230px;
+    width: 230px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+#nums{
+    font-size: 30px;
+}
+.pic i{
+    margin-top: 10px;
+    color: black !important;
+    font-size: 200px;
+}
+/* .confirmBox{
+    display: none;
+} */
+.overlayNote{
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: rgba(0, 0, 0, 0.7);
+    transition: opacity 500ms;
+    display: none;
+    justify-content: center;
+    align-items: center;   
+}
+.confirmBox{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    height: 300px;
+    max-height: 1500px;
+    width: 300px;
+    padding: 10px;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 120px;  
+    overflow: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    line-height: 2;
+} 
+.delBut{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    justify-content: space-evenly;
+    margin-top: 20px;
+}
+.star {
+    visibility:hidden;
+    font-size:45px;
+    cursor:pointer;
+    position: relative;
+    top: -30px;
+}
+.star:checked:before {
+   content: "\2605";
+   /* position: absolute; */
+   
+}
+.star:before {
+   content: "\2606";
+   /* position: absolute; */
+   visibility:visible;
+   color: red;
+} 
+.stary{
+    float: left;
+    top: 0;
+}
+
+.confirCont{
+  text-align: center;
+}
+.actions{
+    position: relative;
+    top: 140px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.actions button{
+        width: 50px;
+        height: 50px;
+        background-color: transparent;
+        text-decoration: none;
+        margin-top: -13px;
+        /* background-color: white; */
+        color: rgb(31, 30, 30);
+        /* border-radius: 8px; */
+        font-size: 20px;
+        font-weight: bold;
+        
+}
+.actions button:hover{
+    background-color: rgb(31, 30, 30);
+    color: white;
+    border: none;
+}
+.delBut button{
+    width: 100px;
+    height: 40px;
+    background-color: white;
+    color: rgb(86, 7, 7);
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+}
+.delBut button:hover{
+    background-color: rgb(86, 7, 7);
+    color: white;
+    border: none;
+}
+.viewCont{
+    background-color: rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    height: 600px;
+    max-height: 1500px;
+    width: 820px;
+    padding: 15px;
+    margin: 0 auto;
+    padding: 30px;
+    margin-top: 120px;  
+    overflow: auto;
+    line-height: 2;
+}
+.viewCont textarea{
+    width: 100%;
+    height: 300px;
+    font-size: 20px;
+    color: black;
+    border-radius: 3px;
+}
+.viewCont label{
+    font-size: 20px;
+    font-weight: bold;
+}
+.viewCont input{
+    width: 300px;
+    height: 35px;
+    background: transparent;
+    border: none;
+    border-bottom: solid 1px !important;
+    border-left:solid 1px !important;
+    font-size: 26px;
+}
+.button-container{
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+
+}
+.button-container button{
+    width: 100px;
+    height: 40px;
+    color: black;
+    background-color: white;
+    border-radius: 8px;
+    font-size: 20px;
+    font-weight: bold;
+    position: relative;
+    /* top: 90px;
+    right: -350px; */
+}
+.button-container button:hover{
+    color: white;
+    background-color:rgb(86, 7, 7);
+    border: none;
+}
+.innerView{
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.noteCont1{
+    width: 400px;
+    height: 500px;
+}
+
+
+
+.popup {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 9999; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+}
+
+/* Popup content */
+.popup-content {
+    background-color: #fefefe;
+    margin: 15% auto; /* 15% from the top and centered */
+    padding: 10px;
+    border: 1px solid #888;
+    width: 80%; /* Could be more or less, depending on screen size */
+    position: relative;
+    top: -100px;
+    height: 50px;
+    text-align: center;
+    color: red;
+    font-weight: bolder;
+}
+
+/* Close button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    position: relative;
+    bottom: 10px;
+}
