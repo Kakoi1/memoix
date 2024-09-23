@@ -126,7 +126,7 @@ if ($_SERVER['REQUEST_METHOD'] == 'POST') {
 
             updating($n_title, $n_description, $n_id, $star, $arc, $date);
            echo '<script type="text/javascript">
-        window.location.href = "./dashboard.php";
+        window.location.href = "dashboard.php";
       </script>';
 
         } catch (PDOException $e) {
